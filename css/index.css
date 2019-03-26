@@ -1,4 +1,4 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* Desktop CSS here! */
 * {
     box-sizing: border-box;
 }
@@ -17,7 +17,7 @@ h1, h2, h3, h4, h5 {
 
 body .container {
 	margin: 0 auto;
-	width: 880px;
+	max-width: 880px;
 }
 
 .navigation {
@@ -113,4 +113,60 @@ footer {
   margin: 45px 0;
   text-align: center;
   font-size: 14px;
+}
+
+/* Tablet view mode here! */
+
+@media (max-width: 768px) {
+  img#code {
+    display: none;
+  }
+
+  .header {
+    display: block;
+    justify-content: center;
+  }
+
+  .logo {
+    order: -1;
+    display: block;
+    margin: 30px auto 0;
+    position: absolute;
+  }
+
+  navigation.logo {
+    margin: 28px, 0 0 91px;
+  }
+
+  .middle-img {
+    width: 730px;
+  }
+}
+
+/* Phone view mode Here! */
+
+@media (max-width: 667px) {
+
+  .navigation a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   }
+
+   .navigation a {
+     margin-left: 0;
+     margin-top: 10px;
+   }
+
+   .logo {
+
+   }
+
+   .header {
+     font-size: 30px;
+   }
+
+   .middle-img {
+     width: 600px;
+   }
 }
