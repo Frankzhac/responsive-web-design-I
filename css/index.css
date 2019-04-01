@@ -50,7 +50,7 @@ header {
   margin-bottom: 50px;
 }
 
-.header {
+.h1-wrapper {
 	display: inline-block;
   vertical-align: top;
   font-size: 40px;
@@ -68,7 +68,7 @@ hr {
   border: 1px solid black;
 }
 
-.header button {
+.h1-wrapper button {
 	width: 125px;
 	height: 25px;
 	font-size: 12px;
@@ -117,56 +117,118 @@ footer {
 
 /* Tablet view mode here! */
 
-@media (max-width: 768px) {
-  img#code {
+@media (max-width: 800px) {
+
+  .container {
+    width: 100%;
+    margin: 0 auto;
+ }
+
+  .navigation{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .navigation nav {
+    padding-right: ;
+  }
+
+  .navigation .logo {
+    margin-bottom: 30px;
+  }
+
+  header {
+    margin-top: 15px;
+    margin-bottom: 50px;
+  }
+
+  .h1-wrapper {
+    display: block;
+    justify-content: center;
+    font-size: 60px;
+  }
+
+  .code {
     display: none;
   }
 
-  .header {
-    display: block;
-    justify-content: center;
-  }
-
-  .logo {
-    order: -1;
-    display: block;
-    margin: 30px auto 0;
-    position: absolute;
-  }
-
-  navigation.logo {
-    margin: 28px, 0 0 91px;
-  }
 
   .middle-img {
-    width: 730px;
+      width: 100%;
   }
+
 }
 
 /* Phone view mode Here! */
 
-@media (max-width: 667px) {
+@media (max-width: 500px) {
 
-  .navigation a {
+  nav {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+   nav a {
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin-left: 1%;
+    padding: 20px 0;
+    font-size: 20px;
+    border-bottom: 1px solid gray;
    }
 
-   .navigation a {
+   .navigation nav a:first-child {
+     border-top: 1px solid gray;
+   }
+
+   .navigation nav a:hover {
+     background: gray;
+     color: black;
+   }
+
+   .h1-wrapper {
+     font-size: 50px;
      margin-left: 0;
-     margin-top: 10px;
    }
 
-   .logo {
-
+   header h1 {
+     text-align: center;
+   }
+   .first-half {
+     display: flex;
+     flex-direction: column;
+     margin-top: 45px;
    }
 
-   .header {
-     font-size: 30px;
+   .first-half .first-half-content {
+      justify-content: space-around;
+      width: 100%;
    }
 
-   .middle-img {
-     width: 600px;
+   .second-half {
+     display: flex;
+     flex-direction: column;
+     margin-top: 45px;
    }
+
+   .second-half .second-half-content {
+     justify-content: space-around;
+     width: 100%;
+   }
+
+  .middle-img {
+    width: 100%;
+  }
+
+  .first-half .second-half {
+    flex-wrap: wrap;
+    align-content: space-between;
+  }
+
 }
